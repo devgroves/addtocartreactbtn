@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Add To Cart React Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Add to cart react component is a component to increase or decrease the cart quanity. Initially clicking on add to cart component will intialize to 1, then increase or decrease the quantity can be done, likewise decreasing the quantity from 1, will bring back the add to cart component. 
+
 
 ## Available Scripts
 
@@ -21,23 +22,38 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `npm run clean && yarn build:esm && yarn build:cjs` folder.\
+It correctly bundles React in production webpack mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to use
 
-### `npm run eject`
+We can import the AddToCartComponent, initialize the add to cart props with minimum, maximum values and pass the reference for the cart component. Pass the props to add to cart component and to get the value of the cart component using the reference passed in props.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    `import { AddToCartComponent }  from "addtocart-react-component";
+    ..
+    const cartProps = {
+        title: "AddToCart",
+        maxVal: 10,
+        minVal: 0,
+        initialVal: 2,
+        ref: cartCountRef,
+    };
+    const checkVal = (e) => {
+        e.preventDefault();
+        console.log("check val", cartCountRef.current.outerText, cartCountRef);
+        setShowval(cartCountRef.current.outerText);
+    };
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    <h1>Add To Cart Component</h1>
+    <AddToCartComponent cartBtnProps={cartProps}/>
+    <h6>We can check Cart Value outside the component</h6>
+    <button onClick={checkVal}>Check Value</button>
+    <p>{showval}</p>`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Please check the below demo video.
+    ![add to cart demo video](addtocartdemo.gif)
 
 ## Learn More
 
