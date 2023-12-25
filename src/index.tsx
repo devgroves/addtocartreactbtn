@@ -1,19 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import * as ReactDOM from "react-dom";
+import App from "./App";
+import AddToCart from "./AddToCart";
+import React, { useRef } from "react";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
+export const AddToCartComponent = AddToCart;
+ReactDOM.render(
+  <div>
+    <h1>Hello, Welcome to React and TypeScript</h1>
     <App />
-  </React.StrictMode>
+  </div>,
+  document.getElementById("root"),
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
