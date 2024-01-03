@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle } from "react";
+import React from "react";
 
 export type CartBtnProps = {
   title: string;

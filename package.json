@@ -27,7 +27,7 @@
     "magic": "webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build": "npm run clean && yarn build:esm && yarn build:cjs",
+    "build": " npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist",
     "prepare": "npm run build",
