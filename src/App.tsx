@@ -4,10 +4,10 @@ import AddToCart, { CartBtnProps } from "./AddToCart";
 const App = () => {
   const cartCountRef: React.ForwardedRef<any> = useRef();
   const cartProps = {
-    title: "AddToCart",
-    maxVal: 10,
+    title: "Add To Cart",
+    maxVal: 100,
     minVal: 0,
-    initialVal: 2,
+    initialVal: 88,
     ref: cartCountRef,
   };
   const [showval, setShowval] = React.useState<string>("");

@@ -35,24 +35,22 @@ const AddToCart: React.FC<{
       setCurrVal(currVal - 1);
     }
   };
-  // useImperativeHandle(ref, ()=>({
-  //   getCurrentVal: () => {
-  //     return currVal;
-  //   }
-  // }))
+
   return (
     <div>
-      {currVal > 0 ? (
-        <div>
-          <button onClick={increaseBtnClick}>+</button>
-          <span ref={cartBtnProps.ref}>{currVal}</span>
-          <button onClick={decreaseBtnClick}>-</button>
-        </div>
-      ) : (
-        <div>
-          <button onClick={addToCartBtnClick}>{cartBtnProps.title}</button>
-        </div>
-      )}
+      <div style={{backgroundColor: "#eb5e28ca", display: "inline-block", borderRadius: "5px", color: "white"}}>
+        {currVal > 0 ? (
+          <div >
+            <button style={{all: "unset", padding: "7px 10px"}} onClick={increaseBtnClick}>+</button>
+            <span style={{display: "inline-block", padding: "7px", width: "20px"}} ref={cartBtnProps.ref}>{currVal}</span>
+            <button style={{all: "unset", padding: "7px 10px"}} onClick={decreaseBtnClick}>-</button>
+          </div>
+        ) : (
+          <div >
+            <button style={{all: "unset", padding: "8px", fontSize: "14px", "fontFamily": "Inter"}} onClick={addToCartBtnClick}>{cartBtnProps.title}</button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
