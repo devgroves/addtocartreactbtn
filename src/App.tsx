@@ -8,6 +8,7 @@ const App = () => {
     maxVal: 100,
     minVal: 0,
     initialVal: 88,
+    color: "#eb5e28ca",
     ref: cartCountRef,
   };
   const [showval, setShowval] = React.useState<string>("");

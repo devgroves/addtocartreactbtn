@@ -5,6 +5,7 @@ export type CartBtnProps = {
   minVal: number;
   initialVal: number;
   maxVal: number;
+  color: string;
   ref: React.MutableRefObject<any>;
 };
 
@@ -40,7 +41,7 @@ const AddToCart: React.FC<{
     <div>
       <div
         style={{
-          backgroundColor: "#eb5e28ca",
+          backgroundColor: `${cartBtnProps.color}`, //"#eb5e28ca",
           display: "inline-block",
           borderRadius: "5px",
           color: "white",

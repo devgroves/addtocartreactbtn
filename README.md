@@ -38,6 +38,7 @@ We can import the AddToCartComponent, initialize the add to cart props with mini
         maxVal: 10,
         minVal: 0,
         initialVal: 2,
+        color: "#eb5e28ca", //button color can be passed as props..
         ref: cartCountRef,
     };
     const checkVal = (e) => {
